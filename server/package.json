@@ -1,0 +1,19 @@
+{
+  "name": "ruang-sunyi-server",
+  "private": true,
+  "version": "3.0.0",
+  "type": "module",
+  "main": "src/index.js",
+  "scripts": {
+    "dev": "node --watch src/index.js",
+    "start": "node src/index.js",
+    "db:migrate": "node scripts/migrate.js"
+  },
+  "dependencies": {
+    "@neondatabase/serverless": "1.2.0",
+    "@vercel/blob": "2.8.2",
+    "express": "4.21.2",
+    "multer": "2.0.2",
+    "pg": "8.13.1"
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "name": "ruang-sunyi",
+  "private": true,
+  "version": "3.0.0",
+  "type": "module",
+  "description": "3D exhibition gallery: React floor-plan editor + Node.js API, deployable to Vercel with Neon Postgres.",
+  "workspaces": [
+    "client",
+    "server"
+  ],
+  "scripts": {
+    "dev": "concurrently -k -n server,client -c yellow,cyan \"npm run dev -w server\" \"npm run dev -w client\"",
+    "build": "npm run build -w client",
+    "start": "npm run start -w server",
+    "db:migrate": "npm run db:migrate -w server"
+  },
+  "dependencies": {
+    "@neondatabase/serverless": "1.2.0",
+    "@vercel/blob": "2.8.2",
+    "express": "4.21.2",
+    "multer": "2.0.2",
+    "pg": "8.13.1"
+  },
+  "devDependencies": {
+    "concurrently": "9.1.2"
+  },
+  "engines": {
+    "node": ">=20.12"
+  }
+}
